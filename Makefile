@@ -9,6 +9,11 @@ endif
 
 NODE_MODULES := ./node_modules/.bin/
 test:
+# alternative: @./node_modules/.bin/mocha but less powerful
 	$(call FixPath, $(NODE_MODULES))mocha --reporter spec
 
-.PHONY: test
+test-w:
+# option to auto-run tests.
+	$(call FixPath, $(NODE_MODULES))mocha --reporter spec --watch --growl
+
+.PHONY: test test-w
