@@ -1,9 +1,24 @@
 var should = require('chai').should(),
-    DisplayMessage = require('../index'),
+    hello = require('../index');
 
-describe('#hello node module', function() {
-  it('display hello message', function() {
-    DisplayMessage().should.equal('Hello Node module!');
-  });
+describe('hello node module', function() {
+	describe('#displayMessage()', function(){
+		it('should show hello message', function() {
+			hello.displayMessage().should.be.equal('Hello Node module!');
+		});
+	});
+
+	describe('#getString()', function(){
+		it('should return an string', function() {
+			hello.getString().should.be.equal('This is a string.');
+		});
+	});
+
+	describe('#getInteger()', function(){
+		it('should return an integer', function() {
+			hello.getInteger().should.be.equal(4444);
+		});
+	});
+  
   // ...
 });
