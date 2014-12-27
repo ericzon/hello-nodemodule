@@ -1,10 +1,10 @@
 {
   "name": "hello-nodemodule",
-  "version": "0.0.1",
+  "version": "0.1.2",
   "description": "First approach to create a node module.",
   "main": "index.js",
   "scripts": {
-    "test": "make test"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",

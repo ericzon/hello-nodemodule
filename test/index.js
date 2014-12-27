@@ -13,12 +13,6 @@ describe('hello node module', function() {
 			hello.getString().should.be.equal('This is a string.');
 		});
 	});
-
-	describe('#getInteger()', function(){
-		it('should return an integer', function() {
-			hello.getInteger().should.be.equal(4444);
-		});
-	});
   
   // ...
 });
